@@ -1,0 +1,11 @@
+<div class="list-pokemon">
+  <h4>liste des  pokemons</h4>
+  <div>
+    <div class="col-3 card m-3" (click)="pokemonList(pockemon)"  *ngFor="let pockemon of pockemons">
+      <div class="name text-center my-2">{{ pockemon.name }}</div>
+      <div><img src="{{ pockemon.imageUrl}}"></div>
+    </div>
+  </div>
+</div>
+
+

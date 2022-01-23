@@ -1,0 +1,24 @@
+<h4>Ajout d'un pokemon</h4>
+<div class="container">
+<div class="create-pokemon">
+<form (ngSubmit)="addPokemons()" [formGroup]="pokemonForm" #myForm="ngForm">
+  <label for="name" class="form-label" >name</label>
+  <input id="name"type="text" name="name" formControlName="name" class="form-control" /><br />
+    <div *ngIf="pokemonForm.controls['name'].errors && myForm.submitted"  class="cross-validation-error-message alert alert-danger">
+      le nom  est requis !
+    </div>
+  <label class="form-label">Image</label><br />
+  <input id="image" type="url" formControlName="imageUrl" name="imageUrl" class="form-control" /><br />
+  <div *ngIf="pokemonForm.controls['imageUrl'].errors && myForm.submitted"   class="cross-validation-error-message alert alert-danger">
+    l' image  est requis !
+  </div>
+  <label class="form-label">description</label><br />
+  <input  id="descr" type="text" formControlName="description"  class="form-control" /><br />
+  <div *ngIf="pokemonForm.controls['description'].errors && myForm.submitted"  class="cross-validation-error-message alert alert-danger">
+    le description  est requis !
+  </div>
+  <button type="submit"  class="btn btn-primary" >Valider</button>
+
+</form>
+</div>
+</div>

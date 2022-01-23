@@ -1,0 +1,12 @@
+.list-pokemon{
+  background-color: aquamarine;
+  width: 500px;
+  height: auto;
+
+}
+.detail-pokemon{
+  background-color: darkcyan;
+  width: 400px;
+  left: 200px;
+}
+
